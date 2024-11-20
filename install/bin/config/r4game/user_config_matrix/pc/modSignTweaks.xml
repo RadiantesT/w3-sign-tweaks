@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserConfig>
+	<Group id="ST_Menu" displayName="Mods.ST_name.ST_menu">
+		<PresetsArray>
+			<!-- PRESETS GO HERE -->
+			<Preset id="0" displayName="ST_default">
+				<Entry varId="ST_Vanilla_Calc_On" value="true"/>
+				<Entry varId="ST_Difficulty_Multiplier" value="1"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>			
+			<Var id="ST_Vanilla_Calc_On" displayName="ST_vanilla_calc_on" displayType="TOGGLE"/>
+			<Var id="Separator" displayName="" displayType="SUBTLE_SEPARATOR"/>
+			<!--varId attribute in Entries should be the same as the id attribute of parent Var-->
+			<Var id="ST_Difficulty_Multiplier" displayName="ST_difficulty_multiplier" displayType="OPTIONS">
+				<OptionsArray>
+					<Option id ="0" displayName="ST_dm_easy">
+						<Entry varId="ST_Difficulty_Multiplier" value="0"/>
+					</Option>
+					<Option id ="1" displayName="ST_dm_normal">
+						<Entry varId="ST_Difficulty_Multiplier" value="1"/>
+					</Option>
+					<Option id ="2" displayName="ST_dm_hard">
+						<Entry varId="ST_Difficulty_Multiplier" value="2"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+		</VisibleVars>
+	</Group>
+</UserConfig>

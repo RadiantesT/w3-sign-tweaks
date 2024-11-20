@@ -1,0 +1,13 @@
+audio.xml;
+gameplay.xml;
+hidden.xml;
+hud.xml;
+input.xml;
+localization.xml;
+gamma.xml;
+display.xml;
+graphics.xml;
+hdr.xml;
+NewLightningMod.xml;
+modRandomEncountersReworked.xml;
+modSignTweaks.xml;

@@ -1,0 +1,13 @@
+;meta[language=en]
+; id      |key(hex)|key(str)|text
+1188309|c3f538a0||When the Aard Sign is cast, it additionally has a $S$% chance of freezing opponents. Opponents knocked down and frozen simultaneously die immediately. Opponents who are not frozen are dealt an additional $S$ damage.<br><u>SignTweaks:</u><br><font color="#29cad6">$S$ %</font>  Chance for frost instant kill (Aard)<br><font color="#29cad6">$S$ %</font>  Chance for frost instant kill (Aard Sweep)
+2119056000||panel_Mods|Mods
+2119056001||panel_ST_name|SignTweaks
+2119056002||panel_ST_menu|General
+2119056003||preset_Mods_ST_name_ST_menu|SignTweaks - General
+2119056004||preset_value_ST_default|Default Settings
+2119056005||option_ST_vanilla_calc_on|Vanilla Behaviour Enable (Knockdown + Freeze = Instant Death)
+2119056006||option_ST_difficulty_multiplier|Sign Intensity Bias (Difficulty)
+2119056007||preset_value_ST_dm_easy|Easy
+2119056008||preset_value_ST_dm_normal|Standard
+2119056009||preset_value_ST_dm_hard|Hard
