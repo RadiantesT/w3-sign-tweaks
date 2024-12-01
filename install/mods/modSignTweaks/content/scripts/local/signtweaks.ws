@@ -16,39 +16,15 @@ struct ST_Settings {
 	var difficulty_multiplier : ST_DifficultyMultiplier;
 }
 
-function st_update_st_settings()
-{
-	var st_settings : ST_Settings = ST_Settings(
-		theGame.GetInGameConfigWrapper().GetVarValue('ST_Menu', 'ST_Vanilla_Calc_On'), 
-		STDM_Invalid
-	);
-
-	//ERROR: xml Option value not returned by GetVarValue (ex. Option values {1, 2, 4}, instead {0, 1, 2} returned)
-	//st_settings.difficulty_multiplier = StringToInt(theGame.GetInGameConfigWrapper().GetVarValue('ST_Menu', 'ST_Difficulty_Multiplier'));
-	switch (StringToInt(theGame.GetInGameConfigWrapper().GetVarValue('ST_Menu', 'ST_Difficulty_Multiplier'))) {
-	case 0:
-		st_settings.difficulty_multiplier = STDM_Easy;
-		break;
-	case 1:
-		st_settings.difficulty_multiplier = STDM_Normal;
-		break;
-	case 2:
-		st_settings.difficulty_multiplier = STDM_Hard;
-		break;
-	default:
-		st_settings.difficulty_multiplier = STDM_Invalid;
-	}
-	thePlayer.set_st_settings(st_settings);
-}
-
 function st_calc_frost_death_chance(optional alternate_cast : bool) : int
 {
 	var dvdr : int;
 	var st_settings : ST_Settings;
 	var aardSP : SAbilityAttributeValue;
+	var error_msg : string;
 	
 	st_settings = thePlayer.get_st_settings();
-	if (st_settings.difficulty_multiplier == STDM_Invalid) {
+	if (st_settings.difficulty_multiplier == STDM_Invalid) {		
 		GetWitcherPlayer().DisplayHudMessage("ST_Error: invalid difficulty multiplier");
 		return 0;
 	}
