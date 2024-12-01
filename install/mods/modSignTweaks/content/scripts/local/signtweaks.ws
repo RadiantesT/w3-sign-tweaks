@@ -1,5 +1,5 @@
-//Pseudo-Makros
-function ST_SIGNPOWER_BIAS_AARD() : float
+//Pseudo macro
+function ST_SIGNPOWER_BIAS_AARD_F() : float
 {
 	return 20.0f;
 }
@@ -18,11 +18,12 @@ struct ST_Settings {
 
 function st_update_st_settings()
 {
-	var st_settings : ST_Settings;
+	var st_settings : ST_Settings = ST_Settings(
+		theGame.GetInGameConfigWrapper().GetVarValue('ST_Menu', 'ST_Vanilla_Calc_On'), 
+		STDM_Invalid
+	);
 
-	st_settings = thePlayer.get_st_settings();
-	st_settings.vanilla_calc_enable = theGame.GetInGameConfigWrapper().GetVarValue('ST_Menu', 'ST_Vanilla_Calc_On');
-	//ERROR: zugewiesen werden nicht Option value (Bsp {1, 2, 4} sondern id {0, 1, 2}
+	//ERROR: xml Option value not returned by GetVarValue (ex. Option values {1, 2, 4}, instead {0, 1, 2} returned)
 	//st_settings.difficulty_multiplier = StringToInt(theGame.GetInGameConfigWrapper().GetVarValue('ST_Menu', 'ST_Difficulty_Multiplier'));
 	switch(StringToInt(theGame.GetInGameConfigWrapper().GetVarValue('ST_Menu', 'ST_Difficulty_Multiplier'))){
 	case 0:
@@ -56,5 +57,5 @@ function st_calc_frost_death_chance(optional alternate_cast : bool) : int
 	if(alternate_cast)
 		dvdr *= 2;	
 
-	return RoundF(aardSP.valueMultiplicative*ST_SIGNPOWER_BIAS_AARD()/dvdr);
+	return RoundF(aardSP.valueMultiplicative*ST_SIGNPOWER_BIAS_AARD_F()/dvdr);
 }

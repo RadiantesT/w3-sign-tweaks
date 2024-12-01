@@ -3,6 +3,7 @@
 	var pam : W3PlayerAbilityManager;
 	var locKey : name;
 	var arrStr : array< string >;
+	var arr_int : array<int>;
 	var min, max, sp : SAbilityAttributeValue;
 	var val : float;
 	
@@ -18,10 +19,10 @@
 		val = sp.valueAdditive + sp.valueMultiplicative * ( sp.valueBase + min.valueAdditive );
 		arrStr.PushBack( NoTrailZeros( RoundMath( val ) ) );	
 		//modTKM_BEGIN
-		arrStr.PushBack( st_calc_frost_death_chance() );
-		arrStr.PushBack( st_calc_frost_death_chance(true) );
+		arr_int.PushBack(st_calc_frost_death_chance());
+		arr_int.PushBack(st_calc_frost_death_chance(true));
 		
-		return GetLocStringByKeyExtWithParams( locKey, , , arrStr );
+		return GetLocStringByKeyExtWithParams(locKey, , , arrStr) + GetLocStringByKeyExtWithParams("ST_mutation6_frost_instakill_description", arr_int, , );
 		//modTKM_END
 	}
 	

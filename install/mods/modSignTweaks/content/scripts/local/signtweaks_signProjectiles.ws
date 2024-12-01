@@ -9,7 +9,7 @@
 	
 	instaKill = false;
 	st_settings = thePlayer.get_st_settings();
-	//knockdown condition nicht gebraucht
+	//knockdown condition unneeded, exclude wherever
 	if(!victimNPC.IsImmuneToInstantKill()) {						
 		if(RandRange(0,100) <= st_calc_frost_death_chance(signEntity.IsAlternateCast())) {							
 			victimNPC.AddEffectDefault(EET_Frozen, this, "Mutation 6", true);

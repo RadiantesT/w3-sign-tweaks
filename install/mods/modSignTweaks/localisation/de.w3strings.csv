@@ -1,6 +1,5 @@
 ;meta[language=de]
 ; id      |key(hex)|key(str)|text
-1188309|c3f538a0||Wird das Aard-Zeichen gewirkt, besteht eine Chance von $S$ %, den Gegner einzufrieren.  Niedergestreckte Gegner, die eingefroren werden, sterben sofort. Gegner, die nicht eingefroren sind, erleiden $S$ Schaden zusätzlich.<br><u>SignTweaks:</u><br><font color="#29cad6">$S$ %</font>  Chance auf Frost-Soforttod (Aard)<br><font color="#29cad6">$S$ %</font>  Chance auf Frost-Soforttod (Aard-Stoss)
 2119056000||panel_Mods|Mods
 2119056001||panel_ST_name|SignTweaks
 2119056002||panel_ST_menu|Allgemein
@@ -11,3 +10,5 @@
 2119056007||preset_value_ST_dm_easy|Einfach
 2119056008||preset_value_ST_dm_normal|Standard
 2119056009||preset_value_ST_dm_hard|Schwer
+2119056010||ST_mutation6_vanilla_disabled_description|Wird das Aard-Zeichen gewirkt, besteht eine Chance von $S$ %, den Gegner einzufrieren.  Niedergestreckte Gegner, die eingefroren werden, sterben sofort. Gegner, die nicht eingefroren sind, erleiden $S$ Schaden zusätzlich.
+2119056011||ST_mutation6_frost_instakill_description|<br><u>SignTweaks:</u><br><font color="#29cad6">$I$ %</font>  Chance auf Frost-Soforttod (Aard)<br><font color="#29cad6">$I$ %</font>  Chance auf Frost-Soforttod (Aard-Stoss)
