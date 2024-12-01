@@ -25,7 +25,7 @@ function st_update_st_settings()
 
 	//ERROR: xml Option value not returned by GetVarValue (ex. Option values {1, 2, 4}, instead {0, 1, 2} returned)
 	//st_settings.difficulty_multiplier = StringToInt(theGame.GetInGameConfigWrapper().GetVarValue('ST_Menu', 'ST_Difficulty_Multiplier'));
-	switch(StringToInt(theGame.GetInGameConfigWrapper().GetVarValue('ST_Menu', 'ST_Difficulty_Multiplier'))){
+	switch (StringToInt(theGame.GetInGameConfigWrapper().GetVarValue('ST_Menu', 'ST_Difficulty_Multiplier'))) {
 	case 0:
 		st_settings.difficulty_multiplier = STDM_Easy;
 		break;
@@ -48,14 +48,14 @@ function st_calc_frost_death_chance(optional alternate_cast : bool) : int
 	var aardSP : SAbilityAttributeValue;
 	
 	st_settings = thePlayer.get_st_settings();
-	if(st_settings.difficulty_multiplier == STDM_Invalid) {
+	if (st_settings.difficulty_multiplier == STDM_Invalid) {
 		GetWitcherPlayer().DisplayHudMessage("ST_Error: invalid difficulty multiplier");
 		return 0;
 	}
 	dvdr = (int)theGame.GetDifficultyMode() * (int)st_settings.difficulty_multiplier; //{EDM_Easy = 1, EDM_Medium = 2, EDM_Hard = 3, EDM_Hardcore = 4} * {STDM_Easy = 1, STDM_Normal = 2, STDM_Hard = 4}	
 	aardSP = GetWitcherPlayer().GetTotalSignSpellPower(S_Magic_1);
-	if(alternate_cast)
+	if (alternate_cast)
 		dvdr *= 2;	
 
-	return RoundF(aardSP.valueMultiplicative*ST_SIGNPOWER_BIAS_AARD_F()/dvdr);
+	return RoundF(aardSP.valueMultiplicative * ST_SIGNPOWER_BIAS_AARD_F() / dvdr);
 }

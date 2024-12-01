@@ -10,8 +10,8 @@
 	instaKill = false;
 	st_settings = thePlayer.get_st_settings();
 	//knockdown condition unneeded, exclude wherever
-	if(!victimNPC.IsImmuneToInstantKill()) {						
-		if(RandRange(0,100) <= st_calc_frost_death_chance(signEntity.IsAlternateCast())) {							
+	if (!victimNPC.IsImmuneToInstantKill()) {						
+		if (RandRange(0,100) <= st_calc_frost_death_chance(signEntity.IsAlternateCast())) {							
 			victimNPC.AddEffectDefault(EET_Frozen, this, "Mutation 6", true);
 			mutationAction = new W3DamageAction in theGame.damageMgr;
 			mutationAction.Initialize(action.attacker, victimNPC, this, "Mutation 6", EHRT_None, CPS_Undefined, false, false, true, false);
@@ -26,11 +26,11 @@
 			instaKill = false;
 		}
 	}	
-	if(st_settings.vanilla_calc_enable) {
-		if(!instaKill)
+	if (st_settings.vanilla_calc_enable) {
+		if (!instaKill)
 			wrappedMethod(victimNPC);
 	} else {
-		//vanilla copypasta_BEGIN
+		//vanilla copypasta_BEGIN (don't reformat)
 		if( applySlowdown /*&& !hasKnockdown*/ )
 		{
 			victimNPC.AddEffectDefault( EET_SlowdownFrost, this, "Mutation 6", true );
