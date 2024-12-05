@@ -1,31 +1,33 @@
-# w3-sign-tweaks
+# Sign Tweaks
 
-pending:
-+ strings müssen auch gestrichen werden
-
-ver 1.0.2411.3
-• viele Namen geändert
-
-
-ver 1.0.2411.2
-xml - geändert sodass auch ST_Difficulty_Multiplier Option value<array> = {0, 1 , 2} -> robust
-ws - difficulty_multiplier : ST_DifficultyMultiplier nicht direkt sondern über switch-case
-	(alternativ ausrechnen: Easy 2^0, Normal 2^1, Hard 2^2)
-Erklärung:
-• GetVarValue sollte eig {1,2,4} sein, ist aber {0,1,2}
-• 1.0.2411.1 angepasst auf {0,1,2} aber nicht robust für wenn {1,2,4} später geht...
-
-ver 1.0.2411.1
-• add two configure params
-1. enable/disable vanilla behaviour
-2. additional difficulty modifier for more customisation
-• menu options for customisation added
-• languages: de, en
-
-ver 1.0.2411.0
-• fully merge free
-
-ver 1.0.2411.0pre
-• wie v4 von 1_32
-• paar strings abgeändert
-• sprachen de, en, rest kopie von en
+A collection of personal changes on sign calculations.
+Current changes:
+- Piercing Cold mutation: added a kill chance to either combine or overwrite vanilla calculations (menu settings).
+	- menu setting - `Vanilla Behaviour Enable`: enable/disable vanilla instant kill condition (freeze + knockdown)
+	- frost kill %: dynamically scales with sign intensity
+	- frost kill %-modifier 01 - game difficulty: chance dynamically scales with the game difficulty
+	- frost kill %-modifier 02 - `Sign Intensity Bias`: additional modifier if you aren't satisfied with the modifier 01 kill chance (too low/just perfect/too high)
+	- menu setting - `Default Settings`: `Vanilla Behaviour Enable` \[On\], `Sign Intensity Bias` \[Standard\]
+## Installation
+1. Download and extract the `.zip`.
+2. Copy `install\mods\` folder into the game's root directory (for example `<somewhere in your drive>\GOG Games\The Witcher 3 Wild Hunt GOTY\`). There should be no conflicts.
+3. Copy `install\bin\` folder into the game's root directory.
+4. Add the mod menu into the game:
+	1. add the line from `dx11filelist_addST.txt` to `dx11filelist.txt`, example:
+	```
+	audio.xml;
+	gameplay.xml;
+	hidden.xml;
+	hud.xml;
+	input.xml;
+	localization.xml;
+	gamma.xml;
+	display.xml;
+	graphicsdx11.xml;
+	hdr.xml;
+	modSignTweaks.xml; #<== this is the new line (without everything that comes after the ';')
+	```
+	
+(for Linux users every `\` is a `/` obviously)
+## How to Use
+pending video or so
