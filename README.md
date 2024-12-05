@@ -4,6 +4,7 @@ A collection of personal changes on sign calculations.
 Current changes:
 - Piercing Cold mutation: added a kill chance to either combine or overwrite vanilla calculations (menu settings).
 	- menu setting - `Vanilla Behaviour Enable`: enable/disable vanilla instant kill condition (freeze + knockdown)
+	- frost kill %: dynamically scales with sign intensity
 	- frost kill %-modifier 01 - game difficulty: chance dynamically scales with the game difficulty
 	- frost kill %-modifier 02 - `Sign Intensity Bias`: additional modifier if you aren't satisfied with the modifier 01 kill chance (too low/just perfect/too high)
 	- menu setting - `Default Settings`: `Vanilla Behaviour Enable` \[On\], `Sign Intensity Bias` \[Standard\]
