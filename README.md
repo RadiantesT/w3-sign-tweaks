@@ -27,7 +27,7 @@ Current changes:
 	hdr.xml;
 	modSignTweaks.xml; #<== this is the new line (without everything that comes after the ';')
 	```
-	
+	2. do the same with `dx12filelist_addST.txt` into `dx12filelist.txt`
 (for Linux users every `\` is a `/` obviously)
 ## How to Use
 pending video or so
