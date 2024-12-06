@@ -8,6 +8,8 @@ Current changes:
 	- frost kill %-modifier 01 - game difficulty: chance dynamically scales with the game difficulty
 	- frost kill %-modifier 02 - `Sign Intensity Bias`: additional modifier if you aren't satisfied with the modifier 01 kill chance (too low/just perfect/too high)
 	- menu setting - `Default Settings`: `Vanilla Behaviour Enable` \[On\], `Sign Intensity Bias` \[Standard\]
+Deprecated changes:
+- Axii Delusion skill: reverted behaviour where lvl3 is weaker than at lvl1 or lvl2, meaning it didn't stun. Only in old gen. Not needed for next gen anymore.
 ## Installation
 1. Download and extract the `.zip`.
 2. Copy `install\mods\` folder into the game's root directory (for example `<somewhere in your drive>\GOG Games\The Witcher 3 Wild Hunt GOTY\`). There should be no conflicts.
