@@ -32,4 +32,12 @@ Deprecated changes:
 	2. do the same with `dx12filelist_addST.txt` into `dx12filelist.txt`
 (for Linux users every `\` is a `/` obviously)
 ## How to Use
-pending video or so
+<a href="https://youtu.be/3cwY50A9_Mk">(Video Link)</a>
+timestamps
+- 00:00:00 Sign Tweaks settings + new kill percentage
+- 00:00:34 game difficulty + new kill percentage
+- 00:01:30 begin test \[Vanilla-off, Bias-easy, difficulty-easy\]
+- 00:04:43 sword + potions -> sign intensity -> kill chance
+- 00:07:04 play around with settings
+- 00:08:00 2nd run
+- 00:17:50 defeat the boss - the funny way
